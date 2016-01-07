@@ -1,10 +1,21 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 17-déc.-2015, 21:46:15
-    Author     : jedepaepe
-*/
-
+/*style="width:100px;height:170px;float: left">*/
+.TwoColumns > section > div:first-child {
+    width: 100px;
+    height: 170px;
+}
+.TwoColumns > section:nth-child(odd) > div:first-child {
+    float: left;    
+}
+.TwoColumns > section:nth-child(odd) > div:last-child {
+    margin-left: 120px;
+}
+.TwoColumns > section:nth-child(even) > div:first-child {
+    float: right;    
+}
+.TwoColumns > section:nth-child(even) > div:last-child {
+    margin-right: 120px;
+}
+.TwoColumns img {
+    width: inherit;
+    height: inherit;
+}
