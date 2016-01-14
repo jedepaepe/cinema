@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf8">
         <title>Films</title>
         <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
     </head>
