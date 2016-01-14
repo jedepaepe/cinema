@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 if (isset($_REQUEST['forename']) AND isset($_REQUEST['password'])) {
     $forename = $_REQUEST['forename'];
     $password = $_REQUEST['password'];
@@ -13,8 +15,11 @@ if (isset($_REQUEST['forename']) AND isset($_REQUEST['password'])) {
     <head>  
         <meta charset="UTF-8">  
         <title>test</title>  
+        <link href="css/header.css" rel="stylesheet" type="text/css"/>
+        <link href="css/form.css" rel="stylesheet" type="text/css"/>
     </head>  
     <body>  
+        <?php include 'header_1.php';?>
         <form method="GET">  
             <input type="text" name="forename" placeholder="forename"><br> 
             <input type="password" name="password" placeholder="pwd"><br>  
@@ -25,7 +30,7 @@ if (isset($_REQUEST['forename']) AND isset($_REQUEST['password'])) {
 
 
 
-include.path=${php.global.include.path}  
+<!--include.path=${php.global.include.path}  
 php.version=PHP_55  
 source.encoding=UTF-8  
 src.dir=.  
@@ -42,4 +47,4 @@ web.root=.
             <name>demo</name>  
         </data>  
     </configuration>  
-</project>
+</project>-->
