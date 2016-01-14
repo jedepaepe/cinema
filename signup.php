@@ -4,6 +4,34 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php 
+
+$DBname = "cinema";
+$DBusername ="root";
+$DBpassword= "";
+$DBservername="localhost";
+$dsn = "mysql:host=$DBservername;dbname=$DBname";
+try {
+    
+$DBconn = new PDO($dsn, $DBusername, $DBpassword);
+if(isset($_REQUEST['username']) && !empty($_REQUEST['username']) && isset($_REQUEST['password']) && !empty($_REQUEST['password']) && isset($_REQUEST['email']) && !empty($_REQUEST['email']))
+{
+    $username = $_REQUEST['username'];
+    $password = $_REQUEST['password'];
+    $email  = $_REQUEST['email'];
+    
+    
+    $sql = 'INSERT INTO loginfo (id,nickname,password,email) VALUES (NULL,\"'.$username.'\",\"'.$password.'\",\"'.$email.'\")' ;
+    $DBconn->query();
+}
+        
+
+} catch (Exception $ex) {
+    echo $ex;
+}
+
+
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -14,13 +42,13 @@ and open the template in the editor.
         <?php include './header.php';?>
     <main>
         <h1>Ici le main SIGN UP</h1>
-        <table class="form">
+        <table class="form" method="post">
             <tr>
                 <td>
                     Username: 
                 </td>
                 <td>
-                    <input type="text" name="username" value="" placeholder="enter your username">
+                    <input type="text" name="username" value="testusername1" placeholder="enter your username">
                 </td>
             </tr>
             <tr>
@@ -28,7 +56,7 @@ and open the template in the editor.
                     Password: 
                 </td>
                 <td>
-                    <input type="password" name="password" value="" placeholder="enter your password">
+                    <input type="password" name="password" value="passwordtest1" placeholder="enter your password">
                 </td>
             </tr>
             <tr>
@@ -36,7 +64,12 @@ and open the template in the editor.
                     Email: 
                 </td>
                 <td>
-                    <input type="email" name="email" value="" placeholder="enter your email">
+                    <input type="email" name="email" value="emailtest1@gmail.com" placeholder="enter your email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Sign Up">
                 </td>
             </tr>
 <!--            <tr>
