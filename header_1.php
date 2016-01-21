@@ -14,7 +14,7 @@
     <?php } 
     else {?>
     <li><a href=""><?php echo $_SESSION["username"]; ?></a></li>
-    <li><a href=""> Disconnect </a></li>
+    <li><a href="?disc=1"> Disconnect </a></li>
     <?php } ?>
 </ul>
 

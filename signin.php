@@ -6,7 +6,13 @@
 session_start();
 $isOk = 0;
 $username = "no username";
-if (isset($_REQUEST['forename']) AND isset($_REQUEST['password'])) {
+if (isset($_REQUEST['disc']) && $_REQUEST['disc'] == 1 ) 
+{
+    session_unset(); 
+    session_destroy();
+    session_start();
+}
+elseif (isset($_REQUEST['forename']) AND isset($_REQUEST['password'])) {
     $forename = $_REQUEST['forename'];
     $password = $_REQUEST['password'];
     $pdo = new PDO('mysql:host=localhost;dbname=film;charset=utf8', 'root', '');
@@ -39,11 +45,11 @@ elseif($isOk == 2)
 {
 //    $_SESSION["username"] = $forename;
 //    $_SESSION["username"] = "qsdfsqdf";
-    $_SESSION["username"] = "isOk == 2";
+//    $_SESSION["username"] = "isOk == 2";
 }
 else
 {
-    $_SESSION["username"] = "ELSE";
+//    $_SESSION["username"] = "ELSE";
 }
 ?>  
 
@@ -61,12 +67,12 @@ else
     </head>  
     <body>  
         <?php include 'header_1.php';?>
-        <form method="GET">  
+           <form method="GET">  
             <input type="text" name="forename" placeholder="forename" value="Maria"><br> 
             <input type="password" name="password" placeholder="pwd" value="WelcomeMaria"><br>  
             <input type="submit" value="Submit">  
         </form>  
-        <?php echo $_SESSION["username"];
+        <?php // echo $_SESSION["username"];
         ?>
     </body>  
 </html>  

@@ -1,6 +1,12 @@
 <?php
 
 session_start();
+if (isset($_REQUEST['disc']) && $_REQUEST['disc'] == 1 ) 
+{
+    session_unset(); 
+    session_destroy();
+    session_start();
+}
 if (isset($_REQUEST['forename']) AND isset($_REQUEST['password'])) {
     $forename = $_REQUEST['forename'];
     $password = $_REQUEST['password'];
