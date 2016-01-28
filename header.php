@@ -25,11 +25,14 @@
     }
 </style>
 <ul>
-    <li><a class="active" href="home">Accueil</a></li>
-    <li><a href="news">Nouveautés</a></li>
-    <li><a href="films.php">Films en salle</a></li>
-    <li><a href="about">Archives</a></li>
-    <li><a href="signin">Sign in</a></li>
-    <li><a href="signup.php">Sign up</a></li>
+    <li><a class="active" href="home.php">Accueil</a></li>
+    <li><a href="films.php">Films</a></li>
+    <li><a href="forum.php">Forum</a></li>
+    
+    <li><a href="inquiry.php">Inquiry</a></li>
+    <li><a href="manage.php">Manage</a></li>
+    <li><a href="users.php">Users</a></li>
+    
+    
 </ul>
 
