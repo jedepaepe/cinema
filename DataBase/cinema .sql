@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 14 Janvier 2016 à 20:23
+-- Généré le :  Jeu 28 Janvier 2016 à 20:44
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.5.8
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 -- Base de données :  `cinema`
 --
 
-CREATE IF NOT EXIST DABASE cinema;
-use cinema;
 -- --------------------------------------------------------
 
 --
@@ -61,6 +59,8 @@ CREATE TABLE IF NOT EXISTS `commentaire` (
 CREATE TABLE IF NOT EXISTS `compte` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) COLLATE utf8_bin NOT NULL,
+  `password` text COLLATE utf8_bin NOT NULL COMMENT 'mot de passe de l''utilisateur',
+  `email` text COLLATE utf8_bin NOT NULL COMMENT 'email de l''utilisateur ',
   `role_ID` int(11) NOT NULL,
   `langue_ID` int(11) NOT NULL,
   PRIMARY KEY (`id`),
@@ -130,8 +130,8 @@ ALTER TABLE `commentaire`
 -- Contraintes pour la table `compte`
 --
 ALTER TABLE `compte`
-  ADD CONSTRAINT `compte_ibfk_2` FOREIGN KEY (`langue_ID`) REFERENCES `langue` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `compte_ibfk_1` FOREIGN KEY (`role_ID`) REFERENCES `role` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `compte_ibfk_1` FOREIGN KEY (`role_ID`) REFERENCES `role` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `compte_ibfk_2` FOREIGN KEY (`langue_ID`) REFERENCES `langue` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
