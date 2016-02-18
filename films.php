@@ -4,14 +4,14 @@ $titreFilm = $porteMysql->query("SELECT* from film");
 $allFilm = $titreFilm->fetchAll();
 ?>
 
-<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf8">
-        <title>Films</title>
-
+        <meta charset="UTF-8">
+        <title>films</title>
     </head>
-    <body>
+
+    <body> 
+
 
         <?php
         echo'<table border= 3 cellspacing = 1 cellpading = 1 width =100%>';
@@ -19,7 +19,9 @@ $allFilm = $titreFilm->fetchAll();
         echo'<td width = 7 >ID';
         echo'<td width = 50 >TITRE';
         echo'<td width = 7>ANNEE';
-        echo'<td width = 200>description';
+        echo'<td width = 200>Description';
+        echo'<td width = 30>OPTIONS';
+        echo'</tr>';
         echo'<tr>';
         $i = 0;
         while ($i < sizeof($allFilm)) {
@@ -27,12 +29,21 @@ $allFilm = $titreFilm->fetchAll();
             echo'<td>' . $allFilm [$i][1] . '</td>';
             echo'<td>' . $allFilm [$i][2] . '</td>';
             echo'<td>' . $allFilm [$i][3] . '</td>';
+            echo'<td><input name="update" type="image" value=".$allFilm [$i][0]."  src="images/update.png" width ="50" height="50" onclick="page.php" >
+            .<input name="delete" type="image" value=".$allFilm [$i][0]."  src="images/poubelle.png" width ="50" height="50" onclick="page.php" ></td>';
+            echo'</tr>';
+
 
             $i++;
-        }
-        ?>
 
-       
-    </body>
+           
+        }
+        echo'</table>';
+        ?> 
+
+
+
+    </body> 
      <?php include './footer.php'; ?>
+    
 </html>
