@@ -17,24 +17,6 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `cinema`
---
-
--- --------------------------------------------------------
-
---
--- Structure de la table `film`
---
-
-CREATE TABLE IF NOT EXISTS `film` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'index primaire',
-  `titre` varchar(100) COLLATE utf8_bin NOT NULL COMMENT 'titre du film',
-  `annee` int(11) NOT NULL COMMENT 'année du film',
-  `description` varchar(5000) COLLATE utf8_bin NOT NULL COMMENT 'description du film',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=5 ;
-
---
 -- Contenu de la table `film`
 --
 
