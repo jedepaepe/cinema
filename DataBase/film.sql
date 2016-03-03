@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.4
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 14 Janvier 2016 à 21:10
--- Version du serveur :  5.6.15-log
--- Version de PHP :  5.5.8
+-- Généré le :  Jeu 14 Janvier 2016 à 16:41
+-- Version du serveur :  5.6.17-log
+-- Version de PHP :  5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,10 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `film`
+-- Base de données :  `cinema`
 --
-CREATE IF NOT EXISTS DATABASE `film` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `film`;
 
 -- --------------------------------------------------------
 
@@ -32,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `film` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'index primaire',
   `titre` varchar(100) COLLATE utf8_bin NOT NULL COMMENT 'titre du film',
   `annee` int(11) NOT NULL COMMENT 'année du film',
+  `description` varchar(5000) COLLATE utf8_bin NOT NULL COMMENT 'description du film',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=5 ;
 
@@ -39,45 +38,11 @@ CREATE TABLE IF NOT EXISTS `film` (
 -- Contenu de la table `film`
 --
 
-INSERT INTO `film` (`id`, `titre`, `annee`) VALUES
-(1, 'Le tout nouveau testament', 2015),
-(2, 'Mustang', 2015),
-(3, 'La soupe au chou', 1985),
-(4, 'Casablanca', 1948);
-
--- --------------------------------------------------------
-
---
--- Structure de la table `user`
---
-
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'index primaire',
-  `forename` varchar(200) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT 'user forename',
-  `surname` varchar(200) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT 'user surname',
-  `password` varchar(200) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT 'user password',
-  `email` varchar(200) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT 'user e-mail',
-  `description` text COLLATE utf8_bin NOT NULL COMMENT 'description of user',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=13 ;
-
---
--- Contenu de la table `user`
---
-
-INSERT INTO `user` (`id`, `forename`, `surname`, `password`, `email`, `description`) VALUES
-(1, 'Maria', 'Maria', 'WelcomeMaria', 'maria@hotmail.com', '2016 season Cinema User'),
-(2, 'Michael', 'Michael', 'WelcomeMichael', 'michael@hotmail.com', '2016 season Cinema User'),
-(3, 'Quentin', 'Quentin', 'WelcomeQuentin', 'quentin@hotmail.com', '2016 season Cinema User'),
-(4, 'Laurine', 'Laurine', 'WelcomeLaurine', 'laurine@hotmail.com', '2016 season Cinema User'),
-(5, 'Veronique', 'Veronique', 'WelcomeVeronique', 'veronique@hotmail.com', '2016 season Cinema User'),
-(6, 'Francois', 'Francois', 'WelcomeFrancois', 'francois@hotmail.com', '2016 season Cinema User'),
-(7, 'Huge', 'Huge', 'WelcomeHuge', 'huge@hotmail.com', '2016 season Cinema User'),
-(8, 'Saul', 'edmundo vantalia', 'WelcomeSaul', 'saul@yahoo.com', '2016 season Cinema User'),
-(9, 'donatien', '', 'don', '', ''),
-(10, 'donatien', '', 'donatien2016', '', ''),
-(11, 'donatien', '', 'donatien2016', '', ''),
-(12, 'pablo', '', 'pablo', '', '');
+INSERT INTO `film` (`id`, `titre`, `annee`, `description`) VALUES
+(1, 'Le tout nouveau testament', 2015, 'Dieu existe. Il habite à Bruxelles. Il est odieux avec sa femme et sa fille. On a beaucoup parlé de son fils, mais très peu de sa fille. Sa fille c’est moi. Je m’appelle Ea et j’ai dix ans. Pour me venger j’ai balancé par SMS les dates de décès de tout le monde…'),
+(2, 'Mustang', 2015, 'C''est le début de l''été.\r\nDans un village reculé de Turquie, Lale et ses quatre sœurs rentrent de l’école en jouant avec des garçons et déclenchent un scandale aux conséquences inattendues.\r\nLa maison familiale se transforme progressivement en prison, les cours de pratiques ménagères remplacent l’école et les mariages commencent à s’arranger.\r\nLes cinq sœurs, animées par un même désir de liberté, détournent les limites qui leur sont imposées.'),
+(3, 'La soupe au chou', 1981, 'Le Glaude et le Bombé, deux vieux paysans portés sur la bouteille, vivent très retirés de la vie moderne. Une nuit, un extra-terrestre atterrit en soucoupe volante dans le jardin du Glaude. En gage de bienvenue, ce dernier lui offre un peu de sa fameuse soupe aux choux...'),
+(4, 'Casablanca', 1947, 'A Casablanca, pendant la Seconde Guerre mondiale, le night-club le plus couru de la ville est tenu par Rick Blaine, un Américain en exil. Mais l''établissement sert également de refuge à ceux qui voudraient se procurer les papiers nécessaires pour quitter le pays. Lorsque Rick voit débarquer un soir le dissident politique Victor Laszlo et son épouse Ilsa, quelle n''est pas sa surprise de retrouver dans ces circonstances le grand amour de sa vie...');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
