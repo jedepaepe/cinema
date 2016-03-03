@@ -12,7 +12,7 @@ $allFilm = $titreFilm->fetchAll();
 
     <body> 
 
-
+        
         <?php
         echo'<table border= 3 cellspacing = 1 cellpading = 1 width =100%>';
         echo'<tr>';
@@ -28,15 +28,13 @@ $allFilm = $titreFilm->fetchAll();
             echo'<td>' . $allFilm [$i][0] . '</td>';
             echo'<td>' . $allFilm [$i][1] . '</td>';
             echo'<td>' . $allFilm [$i][2] . '</td>';
-            echo'<td>' . $allFilm [$i][3] . '</td>';
+            echo'<td>' . utf8_encode($allFilm [$i][3]) . '</td>';
             echo'<td><input name="update" type="image" value=".$allFilm [$i][0]."  src="images/update.png" width ="50" height="50" onclick="page.php" >
-            .<input name="delete" type="image" value=".$allFilm [$i][0]."  src="images/poubelle.png" width ="50" height="50" onclick="page.php" ></td>';
+            .<input name="delete" type="image" value=".$allFilm [$i][0]."  src="images/p11oubelle.png" width ="50" height="50" onclick="page.php" ></td>';
             echo'</tr>';
 
 
             $i++;
-
-           
         }
         echo'</table>';
         ?> 
@@ -44,6 +42,6 @@ $allFilm = $titreFilm->fetchAll();
 
 
     </body> 
-     <?php include './footer.php'; ?>
-    
+<?php include './footer.php'; ?>
+
 </html>
