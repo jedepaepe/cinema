@@ -10,14 +10,14 @@
     <li><a href="#inquiry">Inquiry</a></li>
     <li><a href="#manage">Manage</a></li>
     <li><a href="#users">Users</a></li>
-    //<?php if(!isset($_SESSION["username"])){?>
+    //<?php // if(!isset($_SESSION["username"])){?>
     <!--<li><a href="signin.php">Sign in</a></li>-->
     <!--<li><a href="insert.php">Sign up</a></li>-->
-    //<?php } 
+    //<?php // } 
 //    else {?>
-    <!--<li><a href=""><?php echo $_SESSION["username"]; ?></a></li>-->
+    <!--<li><a href=""><?php // echo $_SESSION["username"]; ?></a></li>-->
     <!--<li><a href="?disc=1"> Disconnect </a></li>-->
-    //<?php } ?>
+    //<?php // } ?>
 </ul>
 
 
