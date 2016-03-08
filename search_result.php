@@ -1,6 +1,9 @@
 <?php
+$search = "";
+if(isset($_POST["search"])){
+    $search = $_POST["search"];}
 $porteMysql = new PDO('mysql:host=localhost;dbname=cinema;chartset=utf8', 'root', '');
-$titreFilm = $porteMysql->query("SELECT* from film");
+$titreFilm = $porteMysql->query("SELECT * from film WHERE titre like '%$search%'");
 $allFilm = $titreFilm->fetchAll();
 ?>
 
