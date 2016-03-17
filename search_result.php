@@ -1,9 +1,14 @@
 <?php
+if (isset($_GET["titre"])) {
+    $titre = "%" . $_GET["titre"] . "%";
+    $sql = "SELECT * from film WHERE titre LIKE '$titre'";
+} else {
+    $sql = "SELECT * from film";
+}
 $porteMysql = new PDO('mysql:host=localhost;dbname=cinema;chartset=utf8', 'root', '');
-$titreFilm = $porteMysql->query("SELECT* from film");
+$titreFilm = $porteMysql->query($sql);
 $allFilm = $titreFilm->fetchAll();
 ?>
-
 <?php
 echo'<table border= 3 cellspacing = 1 cellpading = 1 width =100%>';
 echo'<tr>';
@@ -23,8 +28,6 @@ while ($i < sizeof($allFilm)) {
     echo'<td><input name="update" type="image" value=".$allFilm [$i][0]."  src="images/update.png" width ="50" height="50" onclick="page.php" >
     .<input name="delete" type="image" value=".$allFilm [$i][0]."  src="images/p11oubelle.png" width ="50" height="50" onclick="page.php" ></td>';
     echo'</tr>';
-
-
     $i++;
 }
 echo'</table>';
