@@ -13,7 +13,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `cinema`
 --
-DROP DATABASE cinema;
+DROP DATABASE IF EXISTS cinema;
 CREATE DATABASE IF NOT EXISTS `cinema` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `cinema`;
 
