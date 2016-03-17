@@ -1,7 +1,9 @@
 <?php
 if (isset($_GET["titre"])) {
     $titre = "%" . $_GET["titre"] . "%";
-    $sql = "SELECT * from film WHERE titre LIKE '$titre'";
+    $index = 1;
+    $len = 2;
+    $sql = "SELECT * from film WHERE titre LIKE '$titre' LIMIT $index,$len";
 } else {
     $sql = "SELECT * from film";
 }

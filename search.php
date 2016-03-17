@@ -7,11 +7,13 @@
     </head>
     <body> 
         <?php include './header.php'; ?>
-        <input id="titre" type="search" name="titre" placeholder="titre" onkeyup="search(value)">
+        <input id="titre" type="search" name="titre" placeholder="titre" 
+               onkeyup="search(value)" onsearch="search(value)">
         <div id="result"></div>
     </body>
     <?php include './footer.php'; ?>
     <script>
+        var page = 99;
         function search(value) {
             /*if(arguments.length == 0) {
                 var value = $("#titre").val();

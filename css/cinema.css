@@ -8,6 +8,10 @@ and open the template in the editor.
     Author     : 1009qugeorge
 */
 
+body {
+    margin: 0 100px !important;
+}
+
 .menu ul {
     list-style-type: none;
     margin: 0;
