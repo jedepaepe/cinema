@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Films</title>
+        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/cinema_1.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>

@@ -14,9 +14,10 @@ if (isset($_REQUEST['name']) AND isset($_REQUEST['password'])) {
     <head>  
         <meta charset="UTF-8">  
         <?php if (count($all) > 0)
-        echo '<meta http-equiv="refresh" content="0; url=localhost://cinema.php" />'
+        echo '<meta http-equiv="refresh" content="0; url=http://localhost/cinema.php" />'
         ?>
         <title>test</title>  
+        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
     </head>  
     <body>  
         <form method="GET">  

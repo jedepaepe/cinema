@@ -36,6 +36,7 @@ if(isset($_REQUEST['username']) && !empty($_REQUEST['username']) && isset($_REQU
     <head>
         <meta charset="UTF-8">
         <title>Sign Up</title>
+        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/form.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>

@@ -21,7 +21,7 @@ if (isset($_REQUEST['forename']) AND isset($_REQUEST['password'])) {
     <head>  
         <meta charset="UTF-8">  
         <title>test</title>  
-        <link href="css/header.css" rel="stylesheet" type="text/css"/>
+        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
         <link href="css/form.css" rel="stylesheet" type="text/css"/>
     </head>  
     <body>  

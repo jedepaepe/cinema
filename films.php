@@ -8,6 +8,7 @@ $allFilm = $titreFilm->fetchAll();
     <head>
         <meta charset="UTF-8">
         <title>films</title>
+        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body> 

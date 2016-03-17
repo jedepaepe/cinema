@@ -8,24 +8,18 @@ and open the template in the editor.
     Author     : 1009qugeorge
 */
 
-ul {
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-
-
-
-
 }
 
-li {
+.menu li {
     float: left;
-
-
 }
 
-li a {
+.menu li a {
     background-color: coral;
     /*float: left ;*/
     width: 175px ;
@@ -38,6 +32,6 @@ li a {
     font: 1em "Tahoma" Arial,sans-serif ;
 }
 
-li a:hover {
+.menu li a:hover {
     background-color: #111;
 }
