@@ -10,9 +10,13 @@ $vecteur = $reponse->fetchAll();
         <meta charset="utf8">
         <title>Films</title>
         <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
+        <?php include './standardcss.php'; ?>
     </head>
     <body>
         <?php include './header.php'; ?>
+        <form role="form">
+            <input type="search" class="form-control" id="search" placeholder="rechercher">
+        </form>
         <div>
             <form method="get" action="http://www.google.com">
                 <input type="text" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
@@ -24,7 +28,7 @@ $vecteur = $reponse->fetchAll();
                 <img src="http://www.findingberlin.com/wp-content/uploads/Poster_Victoria.jpg">
             </div>
             <div>
-                <h1>echo $vecteur[0][0]</h1>
+                <h1>Victoria</h1>
                 <p>Have you seen Victoria yet? I will not tell you anything about the plot. It’s better if you don’t know anything – because this gigantically delirious idea of a movie can’t be told. It has to seen as a full composition of filmmaking and storyline.
                     One night, one cut, one incredible German movie. In fact: one incredible Berlin movie. If you can manage to forget about the impressive camera, production and direction work of this outstanding movie, you will find the plot to be as “contemporary Berlin” as can be. And the best thing is: no epic Berlin shots and clichés were abused to establish this perception. Instead, Berlin – the spirit of the city, the heart of the city, the wildness of the city – is hidden in subtle details, the dynamics between the characters, the little twists and turns the movie makes, in the dialogue with the cab driver, in the way those “richtige Berliner” walk, how nothing is overtly romantic and yet extremely hypnotic.
                     Favorite quote: YOU TOUCH MY ASS – SAY SORRY WITH THE HEART!
@@ -57,7 +61,8 @@ $vecteur = $reponse->fetchAll();
         </section>
     </main>
     <?php include './footer.php'; ?>
-</body>
+    <?php include './standardjs.php'; ?>
+
 </html>
 
 
