@@ -62,7 +62,6 @@ CREATE TABLE IF NOT EXISTS `compte` (
   `langue_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `role_ID` (`role_id`),
-  KEY `langue` (`langue_id`),
   KEY `langue_ID` (`langue_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 

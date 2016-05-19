@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf8">
+        <?php include_once './head.php'; ?>
         <title>Inquiry</title>
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <?php include './header.php'; ?>

@@ -1,64 +1,8 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 14-janv.-2016, 21:07:45
-    Author     : 1009qugeorge
-*/
-
-body {
-    margin: 0 100px !important;
-}
-
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.menu li {
-    float: left;
-}
-
-.menu li a {
-    background-color: coral;
-    /*float: left ;*/
-    width: 175px ;
-    display: block ;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    border: 1px solid white ;
-    font: 1em "Tahoma" Arial,sans-serif ;
-}
-
-.menu li a:hover {
-    background-color: #111;
-}
-
-
 /*style="width:100px;height:170px;float: left">*/
-.TwoColumns > section > div:first-child {
-    width: 100px;
-    height: 170px;
+.FilmImg {
+    width: 150px;
 }
-.TwoColumns > section:nth-child(odd) > div:first-child {
-    float: left;    
-}
-.TwoColumns > section:nth-child(odd) > div:last-child {
-    margin-left: 120px;
-}
-.TwoColumns > section:nth-child(even) > div:first-child {
-    float: right;    
-}
-.TwoColumns > section:nth-child(even) > div:last-child {
-    margin-right: 120px;
-}
-.TwoColumns img {
-    width: inherit;
-    height: inherit;
+
+.media:first-child {
+    margin-top: 3px;
 }

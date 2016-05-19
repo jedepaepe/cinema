@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf8">
+        <?php include_once './head.php'; ?>
         <title>Manage</title>
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        <?php include_once './header.php'; ?>
        
         <div>
             <form method="get" action="http://www.google.com">

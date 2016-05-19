@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf8">
+        <?php include_once './head.php'; ?>
         <title>Users</title>
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <?php include './header.php'; ?>
@@ -12,7 +11,7 @@
                 <input type="text" name="q" size="500" maxlength="500"><input type="submit" value="Créer" class="tfbutton">
             </form>
         </div>
-    
-    <?php include './footer.php'; ?>
-</body>
+
+        <?php include './footer.php'; ?>
+    </body>
 </html>

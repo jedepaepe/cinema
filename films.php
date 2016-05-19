@@ -6,13 +6,12 @@ $allFilm = $titreFilm->fetchAll();
 
 <html>
     <head>
-        <meta charset="UTF-8">
+        <?php  include_once 'head.php'; ?>
         <title>films</title>
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body> 
-
+        <?php include 'header.php' ?>
         
         <?php
         echo'<table border= 3 cellspacing = 1 cellpading = 1 width =100%>';
@@ -39,9 +38,6 @@ $allFilm = $titreFilm->fetchAll();
         }
         echo'</table>';
         ?> 
-
-
-
     </body> 
 <?php include './footer.php'; ?>
 

@@ -19,13 +19,11 @@ if (isset($_REQUEST['forename']) AND isset($_REQUEST['password'])) {
 <!DOCTYPE html>  
 <html>  
     <head>  
-        <meta charset="UTF-8">  
         <title>test</title>  
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
-        <link href="css/form.css" rel="stylesheet" type="text/css"/>
+        <?php include_once './head.php'; ?>
     </head>  
     <body>  
-        <?php include 'header_1.php';?>
+        <?php include 'header.php';?>
         <form method="GET">  
             <input type="text" name="forename" placeholder="forename"><br> 
             <input type="password" name="password" placeholder="pwd"><br>  

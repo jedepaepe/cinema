@@ -30,3 +30,17 @@ INSERT INTO `film` (`id`, `titre`, `annee`, `description`) VALUES
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+INSERT INTO `role` (`id`, `type`) VALUES
+(1, 'Admin'),
+(2, 'Contributeur'),
+(3, 'Visiteur');
+
+INSERT INTO `langue` (`type`) VALUES ('FR'), ('ES'), ('EN'), ('NL');
+
+
+INSERT INTO `compte` VALUES 
+(null, 'Michael', 'Michael', 'michael@epfc.eu', 1, 1),
+(null, 'Cyprien', 'Cyprien', 'Cyprien@epfc.eu', 1, 1),
+(null, 'Quentin', 'Quentin', 'Quentin@epfc.eu', 1, 1),
+(null, 'Hugue', 'Hugue', 'Hugue@epfc.eu', 1, 2);

@@ -1,9 +1,7 @@
 <html>
     <head>
-        <meta charset="UTF-8">
+        <?php include_once './head.php'; ?>
         <title>films</title>
-        <link href="css/cinema.css" rel="stylesheet" type="text/css"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     </head>
     <body> 
         <?php include './header.php'; ?>

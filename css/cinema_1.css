@@ -2,19 +2,3 @@
 .FilmImg {
     width: 200px;
 }
-.FilmImg img {
-    width: inherit;
-    height: inherit;
-}
-.FilmImg.Left {
-    float: left;    
-}
-.FilmText.Right {
-    margin-left: 220px;
-}
-.FilmImg.Right {
-    float: right;    
-}
-.FilmText.Left {
-    margin-right: 220px;
-}
