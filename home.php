@@ -1,7 +1,8 @@
 <?php
-$porteMysql = new PDO('mysql:host=localhost;dbname=cinema;chartset=utf8', 'root', '');
-$titreFilm = $porteMysql->query("SELECT titre, description FROM film ORDER BY id DESC LIMIT 4");
-$fourFilm = $titreFilm->fetchAll();
+include_once './DataBase.php';
+$fourFilm = $database->query("SELECT titre, description FROM film ORDER BY id DESC LIMIT 4");
+var_dump($fourFilm);
+echo "<hr>";
 ?>
 
 <!DOCTYPE html>
