@@ -1,9 +1,7 @@
 <?php
 include_once './DataBase.php';
-$fourFilm = $database->query("SELECT titre, description FROM film ORDER BY id DESC LIMIT 4");
-var_dump($fourFilm);
-echo "<hr>";
-?>
+$fourFilm = $cinema->getAllFilms();
+?>  
 
 <!DOCTYPE html>
 <html>
@@ -25,12 +23,15 @@ echo "<hr>";
                     <div class="media">
                         <img src="http://www.findingberlin.com/wp-content/uploads/Poster_Victoria.jpg" class="FilmImg pull-left">
                         <div class="media-body">
-                            <h4 class="media-heading"> <?php echo $fourFilm[$i][0] ?></h4>
-                            <p> <?php echo utf8_encode($fourFilm[$i][1]) ?> </p>
+                            <h4 class="media-heading"> <?php echo $fourFilm[$i][1] ?></h4>
+                            <p> <?php echo utf8_encode($fourFilm[$i][3]) ?> </p>
                         </div>
                     </div>
                 </section>
-            <?php } ?>
+            <?php if($i%2 == 1 && $i != sizeof($fourFilm)-1 ) { ?>
+        </div>    
+        <div class="row">
+            <?php } } ?>
         </div>
     </main>
     <?php include './footer.php'; ?>
